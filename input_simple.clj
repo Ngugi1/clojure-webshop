@@ -12,7 +12,7 @@
 ;
 ; An apple costs €0.25 in Aldi, €0.30 in Carrefour, etc.
 (def prices
-  ; Aldi Carr Colr Delh Lidl
+   ;Aldi Carr Colr Delh Lidl
   [[0.25 0.30 0.28 0.29 0.27] ; Apple
    [1.37 1.20 1.25 1.20 1.32] ; Avocado
    [0.41 0.35 0.35 0.36 0.45] ; Banana
@@ -24,11 +24,11 @@
 ; E.g. there are 150 apples left at Aldi, 250 apples at Carrefour, etc.
 ; Make sure individual types of products can be locked independently
 (def stock
-  ; Aldi Carr Colr Delh Lidl
-  [(ref [  15   25   30   29   15]) ; Apple
-   (ref [   5    7    6   10    2]) ; Avocado
-   (ref [   2   10   20   17    8]) ; Banana
-   (ref [  25   17   31   18   20]) ; Pear
+        ; Aldi Carr Colr Delh Lidl
+  [[  (ref 15)  (ref 25)   (ref 30)   (ref 29)   (ref 15)] ; Apple
+   [  (ref 5)   (ref 7)    (ref 6)    (ref 10)   (ref 2)] ; Avocado
+   [  (ref 2)   (ref 10)   (ref 20)   (ref 17)   (ref 8)] ; Banana
+   [  (ref 25)  (ref 17)   (ref 31)   (ref 18)   (ref 20)] ; Pear
   ])
 
 ; Customers and the products they want to buy.
@@ -47,7 +47,7 @@
    {:id 9 :products [["Apple" 6] ["Pear" 4] ["Avocado" 3]]}
   ])
 
-; Time in milliseconds between sales periods
-(def TIME_BETWEEN_SALES 50)
+; Time in milliseconds between saxles periods
+(def TIME_BETWEEN_SALES 20)
 ; Time in milliseconds of sales period
 (def TIME_OF_SALES 10)
